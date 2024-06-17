@@ -1,3 +1,5 @@
+import re
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -5,33 +7,55 @@ import time
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 
+#initializing empty List and RegEx pattern
+pattern = re.compile(r'(?<=v=)[^&]+')
+v_id = []
+
+Auth_Option = input("Is your 2-Auth enabled?(y/n) : \n")
+
+#To disable safety feature for automation check
 options = Options()
 options.add_argument("--disable-blink-features=AutomationControlled")
 
+#Initiliazing the webdriver
 webdriver = webdriver.Chrome(options = options)
 webdriver.get('https://www.youtube.com/signin')
 time.sleep(2)
+
 username = webdriver.find_element(By.ID,'identifierId')
 if (username) : 
     print('Found Username')
-    username.send_keys('priyanshsaxena787')
+    username.send_keys('t2621814')
     username.send_keys(Keys.RETURN)
     time.sleep(3)
 password = webdriver.find_element(By.CLASS_NAME,'whsOnd')
 if (password):
     print('Found Password')
-    password.send_keys('BlackSheep12')
+    password.send_keys('Test@123')
     password.send_keys(Keys.RETURN)
-    time.sleep(10)
+    if (Auth_Option == 'y' or Auth_Option == 'Y') :
+        time.sleep(20)
+    else :
+        time.sleep(10)
 # side_bar = webdriver.find_element(By.ID,'start').find_element(By.ID,"guide-button")
 # if (side_bar) : 
 #     print("Found Side Bar") 
 #     side_bar.click()
 #     time.sleep(6)
+
 webdriver.get("https://www.youtube.com/feed/history")
 time.sleep(7)
+
+# Extraction of 'V' flag value
 count = 0
-# while count < 5:
+v_codes = webdriver.find_elements(By.ID,'video-title')
+for i in v_codes : 
+    v_code = i.get_attribute('href')
+
+
+# href = v_code.get_attribute('href')
+# print(href)
+
 
 
 # history = webdriver.find_element(By.ID,'contentContainer').find_element(By.ID,'guide-content').find_element(By.ID,'guide-inner-content').find_element(By.ID,'guide-section').find_element(By.ID,'sections').find_element(By.ID,'items')
