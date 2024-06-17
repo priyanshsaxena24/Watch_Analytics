@@ -51,6 +51,12 @@ count = 0
 v_codes = webdriver.find_elements(By.ID,'video-title')
 for i in v_codes : 
     v_code = i.get_attribute('href')
+    match = pattern.search(v_code)
+    if match:
+        v_id.append(match.group())
+        print("Extracted value:", match.group())
+    else:
+        print("No match found.")
 
 
 # href = v_code.get_attribute('href')
