@@ -1,0 +1,96 @@
+{
+    "kind": "youtube#videoListResponse",
+    "etag": "7jJwnZFWXJCA0G88sgdKooaniXU",
+    "items": [
+    {
+        "kind": "youtube#video",
+        "etag": "KLGUmnRYSG4XkKgR-f_mCbDYwyc",
+        "id": "5yauOziwbtE",
+        "snippet": {    
+        "publishedAt": "2024-06-14T01:00:24Z",
+        "channelId": "UCJnJTHGfTIx5ZjD2d3C5hVg",
+        "title": "My Gameshow Will DEFINITELY Get Us In Trouble... | Mind Meld",
+        "description": "Mind Meld Season 1 Finale is OFFICIALLY HERE! Hope you all enjoy my gameshow I created where I put my friends against eachother to see who knew eachother best! Hope you all enjoy Grizzy, Pezzy, Heavenly, Herbo, Hyper, Cheezy and I all having a hilarious time on the gameshow!\nIf you did enjoy, be sure to drop a like and sub!\n\nJoin the Discord for the TALENT SHOW► https://discord.gg/rectrixx\n\nUSE CODE \"REC\" FOR 10% OFF GLITCH ENERGY!► https://glitchenergy.co/rectrixx\n\nFollow my socials:\nLIVE later on Twitch►https://www.twitch.tv/rectrixx\nVODs Channel► https://www.youtube.com/channel/UC5G-iyYEoA76Y3UBPkpBX-g\nJoin the Discord► https://discord.gg/rectrixx\nTwitter►https://twitter.com/Rectrixx_\nInstagram►https://www.instagram.com/rectrixx_/\n\nFriends in the Video:\nTeam 1: (Pookie Pals)\n@Grizzy (Orange)\n@Pezzy (Light Pink)\nTeam 2: (Gamers in Paris)\n@HeavenlyyFather (Green)\n@herboku (Teal)\nTeam 3: (Cheeze and Cracker)\n@Cheezys (Maroon)\n@HyperNovaPuma (Purple)\n\nOutro Song (Made by @ItsNarwal )\nMusic In The Video► http://www.epidemicsound.com/\u200b\u200b\u200b\u200b\u200b\u200b\u200b\n\n#rectrixx #funny #reaction",
+        "thumbnails": {
+            "default": {
+            "url": "https://i.ytimg.com/vi/5yauOziwbtE/default.jpg",
+            "width": 120,
+            "height": 90
+            },
+            "medium": {
+            "url": "https://i.ytimg.com/vi/5yauOziwbtE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+            },
+            "high": {
+            "url": "https://i.ytimg.com/vi/5yauOziwbtE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+            },
+            "standard": {
+            "url": "https://i.ytimg.com/vi/5yauOziwbtE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+            },
+            "maxres": {
+            "url": "https://i.ytimg.com/vi/5yauOziwbtE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+            }
+        },
+        "channelTitle": "Rectrixx",
+        "tags": [
+            "funny moments",
+            "funny",
+            "hilarious",
+            "try",
+            "not",
+            "laugh",
+            "try not to laugh",
+            "moments",
+            "funny memes",
+            "funny videos",
+            "memes",
+            "funny fails",
+            "funny video",
+            "elasticdroid",
+            "twitch clips",
+            "gaming",
+            "rectrixx",
+            "rectrixx laugh",
+            "rectrixx rage",
+            "grizzy",
+            "grizzy wheeze",
+            "pezzy",
+            "elastic droid",
+            "droid and grizzy",
+            "droid and puffer",
+            "puffer",
+            "grizzy droid and pezzy",
+            "grizzy and droid",
+            "kruzadar",
+            "kruz",
+            "grizzy rectrixx",
+            "rectrixx grizzy",
+            "rectrixx kruzadar",
+            "try not to laugh challenge",
+            "smii7y",
+            "gameshow",
+            "mind meld",
+            "rectrixx game show"
+        ],
+        "categoryId": "24",
+        "liveBroadcastContent": "none",
+        "localized": {
+            "title": "My Gameshow Will DEFINITELY Get Us In Trouble... | Mind Meld",
+            "description": "Mind Meld Season 1 Finale is OFFICIALLY HERE! Hope you all enjoy my gameshow I created where I put my friends against eachother to see who knew eachother best! Hope you all enjoy Grizzy, Pezzy, Heavenly, Herbo, Hyper, Cheezy and I all having a hilarious time on the gameshow!\nIf you did enjoy, be sure to drop a like and sub!\n\nJoin the Discord for the TALENT SHOW► https://discord.gg/rectrixx\n\nUSE CODE \"REC\" FOR 10% OFF GLITCH ENERGY!► https://glitchenergy.co/rectrixx\n\nFollow my socials:\nLIVE later on Twitch►https://www.twitch.tv/rectrixx\nVODs Channel► https://www.youtube.com/channel/UC5G-iyYEoA76Y3UBPkpBX-g\nJoin the Discord► https://discord.gg/rectrixx\nTwitter►https://twitter.com/Rectrixx_\nInstagram►https://www.instagram.com/rectrixx_/\n\nFriends in the Video:\nTeam 1: (Pookie Pals)\n@Grizzy (Orange)\n@Pezzy (Light Pink)\nTeam 2: (Gamers in Paris)\n@HeavenlyyFather (Green)\n@herboku (Teal)\nTeam 3: (Cheeze and Cracker)\n@Cheezys (Maroon)\n@HyperNovaPuma (Purple)\n\nOutro Song (Made by @ItsNarwal )\nMusic In The Video► http://www.epidemicsound.com/\u200b\u200b\u200b\u200b\u200b\u200b\u200b\n\n#rectrixx #funny #reaction"
+        }
+        }
+    }
+    ],
+    "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 1
+    }
+}
+

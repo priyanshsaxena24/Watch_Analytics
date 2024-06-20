@@ -47,16 +47,35 @@ webdriver.get("https://www.youtube.com/feed/history")
 time.sleep(7)
 
 # Extraction of 'V' flag value
-count = 0
-v_codes = webdriver.find_elements(By.ID,'video-title')
-for i in v_codes : 
-    v_code = i.get_attribute('href')
-    match = pattern.search(v_code)
-    if match:
-        v_id.append(match.group())
-        print("Extracted value:", match.group())
-    else:
-        print("No match found.")
+# days = webdriver.find_elements(By.CLASS_NAME,'style-scope ytd-item-section-header-renderer')
+
+days = webdriver.find_elements(By.TAG_NAME,'ytd-item-section-renderer')
+for i in days :
+    thumb = i.find_elements(By.ID,'thumbnail')
+    title = i.find_element(By.ID,'title')
+    print(title.text)
+    
+    videos = i.find_elements(By.ID,'video-title')
+    for v in videos :
+        v_code = v.get_attribute('href')
+        match = pattern.search(v_code)
+        if match:
+            v_id.append(match.group())
+            print("Extracted value:", match.group())
+        else:
+            print("No match found.")
+
+
+
+# v_codes = webdriver.find_elements(By.ID,'video-title')
+# for i in v_codes : 
+#     v_code = i.get_attribute('href')
+#     match = pattern.search(v_code)
+#     if match:
+#         v_id.append(match.group())
+#         print("Extracted value:", match.group())
+#     else:
+#         print("No match found.")
 
 
 # href = v_code.get_attribute('href')
