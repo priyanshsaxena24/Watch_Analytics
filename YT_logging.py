@@ -1,4 +1,6 @@
+import json as js
 import re
+import pprint
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
@@ -9,8 +11,9 @@ from selenium.webdriver.chrome.options import Options
 
 #initializing empty List and RegEx pattern
 pattern = re.compile(r'(?<=v=)[^&]+')
-v_id = []
+time_pattern = re.compile(r"t=(\d+)s?")
 
+#Auth Option to adopt to time delay
 Auth_Option = input("Is your 2-Auth enabled?(y/n) : \n")
 
 #To disable safety feature for automation check
@@ -22,49 +25,59 @@ webdriver = webdriver.Chrome(options = options)
 webdriver.get('https://www.youtube.com/signin')
 time.sleep(2)
 
+
 username = webdriver.find_element(By.ID,'identifierId')
 if (username) : 
-    print('Found Username')
     username.send_keys('t2621814')
     username.send_keys(Keys.RETURN)
     time.sleep(3)
 password = webdriver.find_element(By.CLASS_NAME,'whsOnd')
 if (password):
-    print('Found Password')
     password.send_keys('Test@123')
     password.send_keys(Keys.RETURN)
     if (Auth_Option == 'y' or Auth_Option == 'Y') :
         time.sleep(20)
     else :
         time.sleep(10)
-# side_bar = webdriver.find_element(By.ID,'start').find_element(By.ID,"guide-button")
-# if (side_bar) : 
-#     print("Found Side Bar") 
-#     side_bar.click()
-#     time.sleep(6)
+
 
 webdriver.get("https://www.youtube.com/feed/history")
 time.sleep(7)
 
-# Extraction of 'V' flag value
-# days = webdriver.find_elements(By.CLASS_NAME,'style-scope ytd-item-section-header-renderer')
+#TODO : Scroll dynamically down the page to load more videos
+z = 0
+while True :
+    z += 1
+    time.sleep(2)
+    webdriver.execute_script('scrollBy(0,300)')
+    if z > 4:
+        break
 
-days = webdriver.find_elements(By.TAG_NAME,'ytd-item-section-renderer')
-for i in days :
-    thumb = i.find_elements(By.ID,'thumbnail')
-    title = i.find_element(By.ID,'title')
-    print(title.text)
-    
-    videos = i.find_elements(By.ID,'video-title')
-    for v in videos :
-        v_code = v.get_attribute('href')
-        match = pattern.search(v_code)
+data = {}
+days = webdriver.find_elements(By.TAG_NAME, 'ytd-item-section-renderer')
+
+for i in days:
+    day = i.find_element(By.ID,"header").find_element(By.ID,"title")
+    print(day.text)
+    vv = []
+    # addressing each 'Video' section
+    videos = i.find_elements(By.TAG_NAME, 'ytd-video-renderer')
+    for vid in videos :
+        title = vid.find_element(By.ID, 'video-title')
+        v_code = title.get_attribute('href')
+        match_code = pattern.search(v_code)
+        match = time_pattern.search(v_code)
         if match:
-            v_id.append(match.group())
-            print("Extracted value:", match.group())
-        else:
-            print("No match found.")
+            t_value = match.group(1) 
+            vv.append([match_code.group(),t_value])
+        else :
+            time_element = vid.find_element(By.ID,"thumbnail").find_element(By.ID,"overlays")
+            vv.append([match_code.group(),time_element.text])
+    data[day.text] = vv
+webdriver.quit()
 
+with open('data.json','w') as f:
+    js.dump(data,f)
 
 
 # v_codes = webdriver.find_elements(By.ID,'video-title')
@@ -121,4 +134,9 @@ for i in days :
 #     print('Found Sign In')
 
 
-webdriver.quit()
+# side_bar = webdriver.find_element(By.ID,'start').find_element(By.ID,"guide-button")
+# if (side_bar) : 
+#     print("Found Side Bar") 
+#     side_bar.click()
+#     time.sleep(6)
+
