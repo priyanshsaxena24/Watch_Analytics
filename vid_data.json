@@ -1,0 +1,67 @@
+{
+  "videos": [
+    {
+      "videoID": "HIstM0Rlt_c",
+      "channelName": "Automate with Python",
+      "videoTitle": "How to Scroll Down and Up in Selenium Python",
+      "categoryID": "22",
+      "category": "People & Blogs"
+    },
+    {
+      "videoID": "cAkMcPfY_Ns",
+      "channelName": "Green Code",
+      "videoTitle": "I Built a Neural Network from Scratch",
+      "categoryID": "28",
+      "category": "Science & Technology"
+    },
+    {
+      "videoID": "mOzPpeq347M",
+      "channelName": "Z1 Gaming",
+      "videoTitle": "Astroneer Beginner Guide The Basics Part 1 | Z1 Gaming",
+      "categoryID": "20",
+      "category": "Gaming"
+    },
+    {
+      "videoID": "aWKeCQ1jr0M",
+      "channelName": "JVN Gaming",
+      "videoTitle": "Astroneer 1.0 - ACTIVATE ANY GATEWAY | Easy Power Method",
+      "categoryID": "20",
+      "category": "Gaming"
+    },
+    {
+      "videoID": "MzRCDLre1b4",
+      "channelName": "3Blue1Brown",
+      "videoTitle": "Some light quantum mechanics (with minutephysics)",
+      "categoryID": "27",
+      "category": "Education"
+    },
+    {
+      "videoID": "ecog9kGYVfA",
+      "channelName": "aiyopasta",
+      "videoTitle": "3Blue1Brown angrily lashes out at you for being bad at math (POV)",
+      "categoryID": "23",
+      "category": "Comedy"
+    },
+    {
+      "videoID": "W3I3kAg2J7w",
+      "channelName": "3Blue1Brown",
+      "videoTitle": "What \"Follow Your Dreams\" Misses | Harvey Mudd Commencement Speech 2024",
+      "categoryID": "27",
+      "category": "Education"
+    },
+    {
+      "videoID": "LDB4uaJ87e0",
+      "channelName": "Traversy Media",
+      "videoTitle": "React Crash Course 2024",
+      "categoryID": "28",
+      "category": "Science & Technology"
+    },
+    {
+      "videoID": "hhudoSMM0yU",
+      "channelName": "Traversy Media",
+      "videoTitle": "Admin Dashboard From Scratch - Next.js, TypeScript, Shadcn/ui",
+      "categoryID": "28",
+      "category": "Science & Technology"
+    }
+  ]
+}

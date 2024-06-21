@@ -59,25 +59,59 @@ days = webdriver.find_elements(By.TAG_NAME, 'ytd-item-section-renderer')
 for i in days:
     day = i.find_element(By.ID,"header").find_element(By.ID,"title")
     print(day.text)
-    vv = []
+    video_details_list = []
     # addressing each 'Video' section
     videos = i.find_elements(By.TAG_NAME, 'ytd-video-renderer')
     for vid in videos :
+        video_detail = {}
         title = vid.find_element(By.ID, 'video-title')
         v_code = title.get_attribute('href')
         match_code = pattern.search(v_code)
         match = time_pattern.search(v_code)
+        video_detail['videoID'] = match_code.group()
+
+        if match_code:
+            video_detail['videoID'] = match_code.group()
+        
         if match:
             t_value = match.group(1) 
-            vv.append([match_code.group(),t_value])
-        else :
-            time_element = vid.find_element(By.ID,"thumbnail").find_element(By.ID,"overlays")
-            vv.append([match_code.group(),time_element.text])
-    data[day.text] = vv
-webdriver.quit()
+            video_detail['watchTime'] = t_value
+        else:
+            # Find the time element differently if the regular expression didn't match
+            try:
+                time_element = vid.find_element(By.ID, "thumbnail").find_element(By.ID, "overlays")
+                video_detail['watchTime'] = time_element.text
+            except Exception as e:
+                print(f"Error finding time for video: {e}")
+        
+        # Append each video's details to the day's list
+        video_details_list.append(video_detail)
+    
+    # Assign the list of videos to the corresponding day
+    data[day.text] = video_details_list
+
 
 with open('data.json','w') as f:
     js.dump(data,f)
+
+
+
+
+
+# Chalta hua code hai 
+    #     if match:
+    #         t_value = match.group(1) 
+    #         video_detail['watchTime'] = t_value
+    #     else :
+    #         time_element = vid.find_element(By.ID,"thumbnail").find_element(By.ID,"overlays")
+    #         video_detail['watchTime'] = time_element.text
+    # data[day.text] = video_detail
+webdriver.quit()
+
+pprint.pprint(data)
+
+# with open('data.json','w') as f:
+#     js.dump(data,f)
 
 
 # v_codes = webdriver.find_elements(By.ID,'video-title')

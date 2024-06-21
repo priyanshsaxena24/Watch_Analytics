@@ -1,13 +1,13 @@
 {
-  "Yesterday": [["HIstM0Rlt_c", "12:43"]],
-  "Wednesday": [["cAkMcPfY_Ns", "137"]],
+  "Yesterday": [{ "videoID": "HIstM0Rlt_c", "watchTime": "418" }],
+  "Wednesday": [{ "videoID": "cAkMcPfY_Ns", "watchTime": "137" }],
   "Monday": [
-    ["mOzPpeq347M", "840"],
-    ["aWKeCQ1jr0M", "217"],
-    ["MzRCDLre1b4", "1"],
-    ["ecog9kGYVfA", "0:44"],
-    ["W3I3kAg2J7w", "15:30"],
-    ["LDB4uaJ87e0", "1"],
-    ["hhudoSMM0yU", "2:16:37"]
+    { "videoID": "mOzPpeq347M", "watchTime": "840" },
+    { "videoID": "aWKeCQ1jr0M", "watchTime": "217" },
+    { "videoID": "MzRCDLre1b4", "watchTime": "1" },
+    { "videoID": "ecog9kGYVfA", "watchTime": "0:44" },
+    { "videoID": "W3I3kAg2J7w", "watchTime": "15:30" },
+    { "videoID": "LDB4uaJ87e0", "watchTime": "1" },
+    { "videoID": "hhudoSMM0yU", "watchTime": "2:16:37" }
   ]
 }
