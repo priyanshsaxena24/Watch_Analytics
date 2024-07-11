@@ -1,0 +1,14 @@
+.loading-message {
+    font-size: 20px;
+    color: blue;
+    animation: blink 1s infinite;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
