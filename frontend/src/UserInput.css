@@ -1,0 +1,54 @@
+/* UserInput.css */
+
+p {
+    color: #bb8bfa;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Cyberpunk', sans-serif;
+}
+
+.window {
+    border: #bb8bfa;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    margin: 20px auto; /* Center the form */
+    padding: 20px; /* Add padding inside the form */
+    max-width: 500px; /* Limit the width of the form */
+    text-align: left; /* Align text to the left */
+    background-color: #1c1c1c; /* Add a background color for better readability */
+}
+
+.window input {
+    width: calc(100% - 24px); /* Adjust width to fit inside the padding */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffed76;
+    color: #000;
+    font-family: 'Cyberpunk', sans-serif;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: center; /* Center the radio buttons horizontally */
+    align-items: center; /* Center the radio buttons vertically */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.radio-group label {
+    margin-right: 30px; /* Add space between the radio buttons */
+    font-weight: bold;
+    text-align: left;
+}
+
+.button-container {
+    text-align: center; /* Center the submit button */
+}
+
+.loading-message {
+    text-align: center; /* Center the loading message */
+    color: #bb8bfa;
+}

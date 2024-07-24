@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import subprocess
 import json
 import os
-import time
+
 app = FastAPI()
 
 app.add_middleware(
@@ -35,28 +35,30 @@ def run_scripts(username, password, auth_option):
     global processing_complete
     try:
         # Execute the Selenium script
-        result = subprocess.run(['python3', 'ytLogging.py', username, password, auth_option], check=True)
-        print(result)
+        result = subprocess.run(['python3', 'ytLogging.py', username, password, auth_option], check=True, capture_output=True, text=True)
+        print("ytLogging.py output:", result.stdout)
+        print("ytLogging.py error:", result.stderr)
         
         # Execute the API script
-        result = subprocess.run(['python3', 'ytApi.py'], check=True)
-        print(result)
+        result = subprocess.run(['python3', 'ytApi.py'], check=True, capture_output=True, text=True)
+        print("ytApi.py output:", result.stdout)
+        print("ytApi.py error:", result.stderr)
         
         # Execute the data merging script
-        result = subprocess.run(['python3', 'dataMerging.py'], check=True)
-        print(result)
+        result = subprocess.run(['python3', 'dataMerging.py'], check=True, capture_output=True, text=True)
+        print("dataMerging.py output:", result.stdout)
+        print("dataMerging.py error:", result.stderr)
 
         processing_complete = True
     except subprocess.CalledProcessError as e:
+        print("Error occurred:", e)
+        print("Output:", e.output)
+        print("Stderr:", e.stderr)
         processing_complete = False
-        raise HTTPException(status_code=500, detail=str(e))
-
-
 
 @app.get("/status")
 def get_status():
     return {"processing_complete": processing_complete}
-
 
 @app.get("/data")
 def get_data():

@@ -1,0 +1,70 @@
+/* styles.css */
+
+/* General Page Styles */
+body {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  h1, h2 {
+    color: #e0e0e0;
+    text-align: center;
+    font-family: 'Cyberpunk', sans-serif;
+  }
+  
+  /* Chart Container Styles */
+  .chart-container {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+  }
+  
+  /* Total Watch Time Chart */
+  .chart-container:nth-child(2) {
+    background-color: #1b1b3a;
+    border: 2px solid #ffdd57;
+  }
+  
+  /* Most Viewed Channel Chart */
+  .chart-container:nth-child(4) {
+    background-color: #0f3460;
+    border: 2px solid #39ff14;
+  }
+  
+  /* Most Viewed Category Chart */
+  .chart-container:nth-child(6) {
+    background-color: #1b1b3a;
+    border: 2px solid #ffdd57;
+  }
+  
+  /* Chart Labels and Titles */
+  .chart-container canvas {
+    background: transparent;
+  }
+  
+  .chart-container h2 {
+    color: #ffdd57;
+  }
+  
+  /* Alternating Section Styles */
+  .chart-container:nth-child(4) h2 {
+    color: #39ff14;
+  }
+  
+  .chart-container:nth-child(6) h2 {
+    color: #ffdd57;
+  }
+  
+  /* Tooltip and Legend Styles */
+  .chartjs-tooltip {
+    background-color: #1a1a2e;
+    border: 1px solid #e0e0e0;
+    color: #e0e0e0;
+  }
+  
+  .chartjs-legend {
+    display: none;
+  }
+  

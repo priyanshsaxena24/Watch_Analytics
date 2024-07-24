@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 import 'chart.js/auto';
+import './ChartPage.css';
 
 const processData = (data) => {
   const totalWatchTime = {};
