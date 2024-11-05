@@ -4,7 +4,7 @@
 This project analyzes YouTube watch data and presents it in a visual format using charts.
 
 ## Project Structure
-
+```sh
 .
 ├── backend
 │   ├── data.json
@@ -31,6 +31,7 @@ This project analyzes YouTube watch data and presents it in a visual format usin
 ├── .gitignore
 ├── package.json
 └── README.md
+```
 
 ## Backend
 
