@@ -9,7 +9,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins for simplicity, restrict in production
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -34,17 +34,14 @@ async def start_selenium_task(user_input: UserInput, background_tasks: Backgroun
 def run_scripts(username, password, auth_option):
     global processing_complete
     try:
-        # Execute the Selenium script
         result = subprocess.run(['python3', 'ytLogging.py', username, password, auth_option], check=True, capture_output=True, text=True)
         print("ytLogging.py output:", result.stdout)
         print("ytLogging.py error:", result.stderr)
         
-        # Execute the API script
         result = subprocess.run(['python3', 'ytApi.py'], check=True, capture_output=True, text=True)
         print("ytApi.py output:", result.stdout)
         print("ytApi.py error:", result.stderr)
         
-        # Execute the data merging script
         result = subprocess.run(['python3', 'dataMerging.py'], check=True, capture_output=True, text=True)
         print("dataMerging.py output:", result.stdout)
         print("dataMerging.py error:", result.stderr)
